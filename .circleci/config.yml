@@ -6,7 +6,7 @@ orbs:
 jobs:
     build:
         docker:
-            - image: circleci/node:node-browsers
+            - image: circleci/node:current-browsers
         steps:
             - checkout
             - run: |
