@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js && jasmine test-spec.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "chromedriver": "^89.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "jasmine": "^3.7.0",
     "selenium-webdriver": "*"
   }
 }
