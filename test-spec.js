@@ -9,11 +9,7 @@ const driver = new Builder()
 
 // Get environment variables for Skuid site credentials
 const baseUrl = 'http://localhost:3000'
-// const baseUrl = process.env.SKUID_HOST
-// const username = process.env.SKUID_UN
-// const password = process.env.SKUID_PW
 
-// Logic to login to a Skuid site using the above credentials
 // Note: This function does not check if already logged in.
 var button = async function() {
     // Define login elements
@@ -24,7 +20,7 @@ var button = async function() {
     await driver.get(baseUrl);
 
     // Wait until the page is loaded
-    await driver.wait(until.elementLocated(clickButton), 10 * 1000);
+    await driver.wait(until.elementLocated(clickButton), 10 * 5000);
     console.log('Screen is loaded.')
 
 }
