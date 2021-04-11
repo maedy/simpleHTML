@@ -10,8 +10,8 @@ jobs:
         steps:
             - checkout
             - run: |
-                npm install -g jasmine
-                jasmine test-spec.js
+                npm install
+                npm run test
 
 workflows:
     main:
