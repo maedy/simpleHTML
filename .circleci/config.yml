@@ -11,7 +11,7 @@ jobs:
             - checkout
             - run: |
                 npm install
-                npm start
+                npm start &
                 npm run test
 
 workflows:
