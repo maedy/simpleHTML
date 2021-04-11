@@ -20,7 +20,7 @@ var button = async function() {
     await driver.get(baseUrl);
 
     // Wait until the page is loaded
-    await driver.wait(until.elementLocated(clickButton), 10 * 5000);
+    await driver.wait(until.elementLocated(clickButton), 10 * 1000);
     console.log('Screen is loaded.')
 
 }
