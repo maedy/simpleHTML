@@ -1,19 +1,20 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@3.0.0
+    node: circleci/node@3.0.0
 
 jobs:
-  build:
-    docker:
-      - image: circleci/node:jessie-browsers
-    steps:
-      - checkout
-      - run: | npm install -g jasmine
-      jasmine test-spec.js
+    build:
+        docker:
+            - image: circleci/node:jessie-browsers
+        steps:
+            - checkout
+            - run: |
+                npm install -g
+                jasmine test-spec.js
 
 workflows:
-  main:
-    jobs:
-      - build
-  
+    main:
+        jobs:
+            - build
+    
