@@ -10,6 +10,7 @@ jobs:
     steps:
       - checkout
       - run: 
+      - name: npm install and run
       - command: |
         npm install
         node app.js
