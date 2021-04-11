@@ -10,13 +10,13 @@ jobs:
     steps:
       - checkout
 
-      - run: npm install
-        
   run-tests:
     docker:
       - image: circleci/node:jessie-browsers
     steps:
-      - run: jasmine test-spec.js
+      - run: |
+        npm install -g jasmine
+        jasmine test-spec.js
 
 workflows:
   main:
