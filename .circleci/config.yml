@@ -4,21 +4,15 @@ orbs:
   node: circleci/node@3.0.0
 
 jobs:
-  checkout-code:
+  build:
     docker:
       - image: circleci/node:jessie-browsers
     steps:
       - checkout
-
-  run-tests:
-    docker:
-      - image: circleci/node:jessie-browsers
-    steps:
       - run: jasmine test-spec.js
 
 workflows:
   main:
     jobs:
-      - checkout-code
-      - run-tests
+      - build
   
