@@ -1,26 +1,18 @@
-# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
 
 jobs:
-  checkout-code:
-    docker:
-      - image: circleci/node:jessie-browsers
-    steps:
-      - checkout
-
     run-tests:
-    docker:
-      - image: circleci/node:jessie-browsers
-    steps:
-       - run:
-         name: Test the Web site
-         commmand: |
-           jasmine test-spec.js
+      docker:
+        - image: circleci/node:jessie-browsers
+      steps:
+         - run:
+           name: Test the Web site
+           commmand: |
+             jasmine test-spec.js
 workflows:
   main:
     jobs:
-      - checkout-code
       - run-tests
 
